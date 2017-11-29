@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MiniGridComponent } from './mini-grid.component';
-import { MiniColumnDirective } from './mini-column/mini-column.directive';
+import { MiniRowComponent } from './mini-row/mini-row.component';
+import { MiniHeaderRowComponent } from './mini-header-row/mini-header-row.component';
 
 @NgModule({
   imports: [
@@ -10,10 +11,13 @@ import { MiniColumnDirective } from './mini-column/mini-column.directive';
   ],
   declarations: [
     MiniGridComponent,
-    MiniColumnDirective
+    MiniRowComponent,
+    MiniHeaderRowComponent
   ],
   exports: [
-    MiniGridComponent
+    MiniGridComponent,
+    MiniRowComponent,
+    MiniHeaderRowComponent
   ]
 })
 export class MiniGridModule { }

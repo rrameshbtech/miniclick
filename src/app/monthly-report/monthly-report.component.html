@@ -1,11 +1,17 @@
 <section>
   <h1>Monthly Report</h1>
-  <mini-grid [dataSource]="monthlyReport">
-    <ng-container miniColumn="idColumn">
-      this is test data
-    </ng-container>
-    <ng-container miniColumn="nameColumn">
-      this is test data1
-    </ng-container>
+  <mini-grid theme="classic" [dataSource]="monthlyReport">
+    <mini-header-row>
+      <div>Id</div>
+      <div>User Name</div>
+      <div>Game</div>
+      <div>Difficulty Level</div>
+      <div>Start Time</div>
+      <div>End Time</div>
+      <div>Score</div>
+    </mini-header-row>
+    <mini-row>
+      <div>data row</div>
+    </mini-row>
   </mini-grid>
 </section>

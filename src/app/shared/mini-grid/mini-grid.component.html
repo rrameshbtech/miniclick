@@ -1,6 +1,6 @@
-<section>
-  <div *ngFor="let user of dataSource">
-    {{user.id}}
-    {{user.userName}}
-  </div>
-</section>
+<div class="{{theme}} mini-grid ">
+  <ng-content select="mini-header-row"></ng-content>
+  <ng-container *ngFor="let user of dataSource">
+    <ng-content select="mini-row"></ng-content>
+  </ng-container>
+</div>

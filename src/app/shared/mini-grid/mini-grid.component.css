@@ -1,0 +1,23 @@
+.mini-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.classic.mini-grid{
+    border: solid 1px #000;
+}
+
+:host ::ng-deep .mini-header-row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;    
+}
+
+:host ::ng-deep .mini-row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;    
+}
