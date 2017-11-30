@@ -1,6 +1,13 @@
 <div class="{{theme}} mini-grid ">
-  <ng-content select="mini-header-row"></ng-content>
-  <ng-container *ngFor="let user of dataSource">
-    <ng-content select="mini-row"></ng-content>
+  <div class="mini-header-row">
+    <ng-container *ngTemplateOutlet="headerRowTemplate">
+    </ng-container>
+  </div>
+  <ng-container *ngFor="let row of dataSource; let i = index">
+    <div class="mini-row {{ i%2 ? 'even' : 'odd'}}">
+      <ng-container *ngTemplateOutlet="rowTemplate; context:{$implicit:row}">
+      </ng-container>
+    </div>
   </ng-container>
+
 </div>

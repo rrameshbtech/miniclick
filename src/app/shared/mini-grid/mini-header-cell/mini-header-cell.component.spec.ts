@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MiniRowComponent } from './mini-row.component';
+import { MiniHeaderCellComponent } from './mini-header-cell.component';
 
-describe('MiniRowComponent', () => {
-  let component: MiniRowComponent;
-  let fixture: ComponentFixture<MiniRowComponent>;
+describe('MiniHeaderCellComponent', () => {
+  let component: MiniHeaderCellComponent;
+  let fixture: ComponentFixture<MiniHeaderCellComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MiniRowComponent ]
+      declarations: [ MiniHeaderCellComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MiniRowComponent);
+    fixture = TestBed.createComponent(MiniHeaderCellComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

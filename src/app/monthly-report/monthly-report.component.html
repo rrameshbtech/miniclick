@@ -1,17 +1,25 @@
 <section>
   <h1>Monthly Report</h1>
-  <mini-grid theme="classic" [dataSource]="monthlyReport">
-    <mini-header-row>
-      <div>Id</div>
-      <div>User Name</div>
-      <div>Game</div>
-      <div>Difficulty Level</div>
-      <div>Start Time</div>
-      <div>End Time</div>
-      <div>Score</div>
-    </mini-header-row>
-    <mini-row>
-      <div>data row</div>
-    </mini-row>
-  </mini-grid>
+  <div class="report-container">
+    <mini-grid theme="classic" [dataSource]="monthlyReport">
+      <ng-container *miniHeaderRow>
+        <mini-header-cell>Id</mini-header-cell>
+        <mini-header-cell>User Name</mini-header-cell>
+        <mini-header-cell>Game</mini-header-cell>
+        <mini-header-cell>Difficulty Level</mini-header-cell>
+        <mini-header-cell>Start Time</mini-header-cell>
+        <mini-header-cell>End Time</mini-header-cell>
+        <mini-header-cell>Score</mini-header-cell>
+      </ng-container>
+      <ng-container *miniRow="let user">
+        <mini-cell>{{user.id}}</mini-cell>
+        <mini-cell>{{user.userName}}</mini-cell>
+        <mini-cell>{{user.game}}</mini-cell>
+        <mini-cell>{{user.difficulty}}</mini-cell>
+        <mini-cell>{{user.startTime}}</mini-cell>
+        <mini-cell>{{user.endTime}}</mini-cell>
+        <mini-cell>{{user.score}}</mini-cell>
+      </ng-container>
+    </mini-grid>
+  </div>
 </section>
