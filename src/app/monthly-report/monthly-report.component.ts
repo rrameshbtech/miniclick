@@ -15,9 +15,9 @@ export class MonthlyReportComponent implements OnInit {
 
   ngOnInit() {
     this.service
-      .getReport()
-      .subscribe((report) => {
-        this.monthlyReport = report;
+      .getMonthlyReport()
+      .subscribe((reportDetails) => {
+        this.monthlyReport = reportDetails.data;
       });
   }
 

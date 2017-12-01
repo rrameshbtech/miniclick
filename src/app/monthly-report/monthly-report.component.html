@@ -16,8 +16,8 @@
         <mini-cell>{{user.userName}}</mini-cell>
         <mini-cell>{{user.game}}</mini-cell>
         <mini-cell>{{user.difficulty}}</mini-cell>
-        <mini-cell>{{user.startTime}}</mini-cell>
-        <mini-cell>{{user.endTime}}</mini-cell>
+        <mini-cell>{{user.startTime | date: 'MM/dd/yyyy'}}</mini-cell>
+        <mini-cell>{{user.endTime | date: 'MM/dd/yyyy'}}</mini-cell>
         <mini-cell>{{user.score}}</mini-cell>
       </ng-container>
     </mini-grid>
